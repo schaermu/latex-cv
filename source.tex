@@ -1,0 +1,78 @@
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+\moderncvstyle{fancy}
+\moderncvcolor{blue}
+\nopagenumbers{}
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.75]{geometry}
+
+% personal data
+\name{Stefan}{Schärmeli}
+\title{Lebenslauf}
+\address{Winkelriedstrasse 46}{3014 Bern}{Schweiz}
+\phone[mobile]{+41763686616}
+\email{info@schaermu.ch}
+\homepage{www.schaermu.ch}
+\social[linkedin]{stefan.schaermeli}
+\social[github]{schaermu}
+\photo[64pt][0pt]{picture}
+
+\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+
+\begin{document}
+
+\makecvtitle
+
+\section{Beruflicher Werdegang}
+\cventry{11/2016--heute}{Senior Web Developer}{smartfactory GmbH}{Biel}{}{Bei der Firma smartfactory werden Mobile-Apps, Websites und AR/VR-Applikationen entwickelt. Ich zeichnete für diverse Themen verantwortlich, bewegte mich jedoch vor allem im Bereich App-CMS Entwicklung.\newline{}%
+Abgesehen von Web-Entwicklung kümmerte ich mich u.A. um folgende Themen:%
+\begin{itemize}%
+\item Continuous Integration/Deployment
+\item Monitoring/Betrieb der Webserver (Ubuntu)
+\item Standardisierung/Einführung von firmeninternen Buildpipelines
+\end{itemize}}
+
+\cventry{07/2012--07/2016}{Senior Web Developer}{Maxomedia AG}{Bern}{}{Implementierung, Planung und Wartung von CMS-Websites, Plattformen und App-Backends in ASP.NET MVC. Zusätzlich Betrieb und Konfiguration von Microsoft-Webservern und SQL-Servern sowie die fachliche Führung des Teams Digital.\newline{}Ab 2016 Team-Leiter Team Digital, personelle Führung.}
+
+\cventry{08/2011--07/2012}{Application Manager}{Interactive Data Managed Solutions}{Zürich}{}{Überwachung und Planung von Software-Deployments, Koordination und Enforcement des ITIL-Prozesses und Ticket-Management.}
+
+\cventry{12/2007--06/2011}{Web Developer}{neue chemigraphie AG}{Urdorf}{}{Implementierung und Wartung von Druckvorstufe-Automatisierungen und Web-Applikationen zur Verwaltung von Mediendatenbanken. Unterhalt und Wartungsaufgaben auf Linux-Infrastruktur.}
+
+\cventry{12/2007--06/2011}{selbstständig/Freelancer}{}{}{}{Implementierung von Custom- sowie Typo3-PHP Websites, später PHP Auftragsarbeiten sowie Server-Betreuung im Linux-Umfeld.}
+
+\clearpage
+
+\section{Ausbildung}
+\cventry{08/1999--07/2003}{Informatiker EFZ}{GIBB Bern}{Bern}{}{Abschluss als Informatiker EFZ}
+
+\section{Sprachen}
+\cvitem{Deutsch}{Muttersprache}
+\cvitem{Englisch}{mündlich und schriftlich sehr gut}
+\cvitem{Französisch}{Schulkenntnisse}
+
+\section{Skillset}
+\cvitemwithcomment{Javascript}{ausgezeichnet}{ES5/ES6, node.js, AngularJS, Vue.JS}
+\cvitemwithcomment{C\#/ASP.NET}{sehr gut}{ASP.NET MVC/WebAPI 2, EntityFramework}
+\cvitemwithcomment{Python}{sehr gut}{django, rest-framework}
+\cvitemwithcomment{Buildpipelines}{sehr gut}{Webpack, Gitlab CI, Fastlane, Gradle}
+\cvitemwithcomment{DevOps}{(sehr) gut}{GitLab CI, Docker, Chef/Puppet}
+\cvitemwithcomment{HTML5/CSS3}{(sehr) gut}{SASS, Stylus}
+\cvitemwithcomment{PHP}{gut}{Laravel/Wordpress}
+
+\section{Freizeit}
+\cvitem{Joggen / Schwimmen}{...oder auch "den hohen Steuersatz in Bern mit einem Aareschwumm erträglicher machen".}
+\cvitem{Filme / Bücher}{Über gute (und auch schlechte) Filme oder Bücher könnte ich mich stundenlang unterhalten.}
+\cvitem{Open-Source}{Sofern die Zeit es zulässt, involviere ich mich gerne in spannenden Open-Source Projekten.}
+
+\section{Referenzen}
+\begin{cvcolumns}
+  \cvcolumn{smartfactory Gmbh}{\begin{itemize}\item Roger Lüchinger, Geschäftsführer{\newline}+41 32 365 30 00\end{itemize}}
+  \cvcolumn{Weitere}{\begin{itemize}\item Auf Anfrage\end{itemize}}
+\end{cvcolumns}
+
+\end{document}
