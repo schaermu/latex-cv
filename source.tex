@@ -1,42 +1,62 @@
+%% start of file `template.tex'.
 %% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
-\documentclass[11pt,a4paper,sans]{moderncv}
-\moderncvstyle{fancy}
-\moderncvcolor{blue}
-\nopagenumbers{}
-\usepackage[utf8]{inputenc}
+% moderncv themes
+\moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvcolor{burgundy}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
 \usepackage[scale=0.75]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
 \name{Stefan}{Schärmeli}
 \title{Lebenslauf}
 \address{Viktoriastrasse 40}{3013 Bern}{Schweiz}
 \phone[mobile]{+41763686616}
-\email{info@schaermu.ch}
+\email{schaermu@pm.me}
 \social[linkedin]{stefan.schaermeli}
 \social[github]{schaermu}
 \photo[64pt][0pt]{picture}
 
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
 \makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
 
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
 \begin{document}
-
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
 \makecvtitle
 
 \section{Beruflicher Werdegang}
-\cventry{10/2018--heute}{Fullstack Developer}{Post CH AG}{Bern}{}{Planung, Design und Umsetzung von Innovations-Projekten im Logistik-Umfeld mit .NET, Kubernetes, ArgoCD, AWS Cloud unter Einsatz von GitOps- sowie DevSecOps-Prinzipien. Erfahrungen mit Technologien wie Chatbots und Alexa/Google Home, Unterstützung von Post-Produkten und -Projekten in der Weiterentwicklung.\newline{}%
-Ausserhalb dieser Haupttätigkeiten engagiere ich mich in folgenden Feldern:\newline{}%
+\cventry{2018--heute}{Fullstack Developer}{Post CH AG}{Bern}{}{Planung, Design und Umsetzung von Innovations-Projekten im Logistik-Umfeld mit .NET, Kubernetes, ArgoCD, AWS Cloud unter Einsatz von GitOps- sowie DevSecOps-Prinzipien. Erfahrungen mit Technologien wie Chatbots und Alexa/Google Home, Unterstützung von Post-Produkten und -Projekten in der Weiterentwicklung. Zusätzliche Engagements:\newline{}%
 \begin{itemize}%
 \item Co-Programm Lead Security Champion Programm
-\item Organisation von Schulungen/CTF's für Entwickler im AppSecurity Bereich
+\item Organisation von Schulungen/CTF's für Entwickler im Bereich Application Security
 \item Etablierung einer OpenSource-Community
 \item Monitoring/Betrieb unserer teaminternen Cloud-Plattform für MVP's und PoC's
 \end{itemize}}
-\cventry{11/2016--09/2018}{Senior Web Developer}{smartfactory GmbH}{Biel}{}{Bei der Firma smartfactory werden Mobile-Apps, Websites und AR/VR-Applikationen entwickelt. Ich zeichnete für diverse Themen verantwortlich, bewegte mich jedoch vor allem im Bereich App-CMS Entwicklung in Python (Django).\newline{}%
+\cventry{2016--2018}{Senior Web Developer}{smartfactory GmbH}{Biel}{}{Bei der Firma smartfactory werden Mobile-Apps, Websites und AR/VR-Applikationen entwickelt. Ich zeichnete für diverse Themen verantwortlich, bewegte mich jedoch vor allem im Bereich App-CMS Entwicklung in Python (Django).\newline{}%
 Abgesehen von Web-Entwicklung kümmerte ich mich u.A. um folgende Themen:\newline{}%
 \begin{itemize}%
 \item Continuous Integration/Deployment
@@ -44,27 +64,28 @@ Abgesehen von Web-Entwicklung kümmerte ich mich u.A. um folgende Themen:\newlin
 \item Standardisierung/Einführung von firmeninternen Buildpipelines
 \end{itemize}}
 
-\cventry{07/2012--07/2016}{Senior Web Developer}{Maxomedia AG}{Bern}{}{Implementierung, Planung und Wartung von CMS-Websites, Plattformen und App-Backends in ASP.NET MVC. Zusätzlich Betrieb und Konfiguration von Microsoft-Webservern und SQL-Servern sowie die fachliche Führung des Teams Digital.\newline{}Ab 2016 Team-Leiter Team Digital, personelle Führung.}
+\cventry{2012--2016}{Senior Web Developer}{Maxomedia AG}{Bern}{}{Implementierung, Planung und Wartung von CMS-Websites, Plattformen und App-Backends in ASP.NET MVC. Zusätzlich Betrieb und Konfiguration von Microsoft-Webservern und SQL-Servern sowie die fachliche Führung des Teams Digital.\newline{}Ab 2016 Team-Leiter Team Digital, personelle Führung.}
+
+
+\cventry{2011--2012}{Application Manager}{Interactive Data Managed Solutions}{Zürich}{}{Überwachung und Planung von Software-Deployments, Koordination und Enforcement des ITIL-Prozesses und Ticket-Management.}
+
+\cventry{2007--2011}{Web Developer}{neue chemigraphie AG}{Urdorf}{}{Implementierung und Wartung von Druckvorstufe-Automatisierungen und Web-Applikationen zur Verwaltung von Mediendatenbanken. Unterhalt und Wartungsaufgaben auf Linux-Infrastruktur.}
+
+\cventry{2007--2011}{selbstständig/Freelancer}{}{}{}{Implementierung von Custom- sowie Typo3-PHP Websites, später Auftragsarbeiten für PHP-Software sowie Server-Betreuung im Linux-Umfeld.}
 \clearpage
+\section{Technisches Skillset}
+\cvitemwithcomment{* * * * *}{Frontend}{Typescript, ES5/ES6, Angular, Vue.JS, HTML, CSS}
+\cvitemwithcomment{* * * * *}{API/Backend}{.NET Core, Python, Go, node.js}
+\cvitemwithcomment{* * * * *}{CI/CD}{Gitlab CI, Github Actions, Jenkins}
+\cvitemwithcomment{* * * *}{Security}{Red Teaming, Code Analysis, Threat Modelling}
+\cvitemwithcomment{* * * *}{Tooling}{Webpack, Docker, k8s}
+\cvitemwithcomment{* * *}{IaC}{Terraform, Ansible}
 
-\cventry{08/2011--07/2012}{Application Manager}{Interactive Data Managed Solutions}{Zürich}{}{Überwachung und Planung von Software-Deployments, Koordination und Enforcement des ITIL-Prozesses und Ticket-Management.}
-
-\cventry{12/2007--06/2011}{Web Developer}{neue chemigraphie AG}{Urdorf}{}{Implementierung und Wartung von Druckvorstufe-Automatisierungen und Web-Applikationen zur Verwaltung von Mediendatenbanken. Unterhalt und Wartungsaufgaben auf Linux-Infrastruktur.}
-
-\cventry{12/2007--06/2011}{selbstständig/Freelancer}{}{}{}{Implementierung von Custom- sowie Typo3-PHP Websites, später PHP Auftragsarbeiten sowie Server-Betreuung im Linux-Umfeld.}
-
-\section{Ausbildung}
-\cventry{08/1999--07/2003}{Informatiker EFZ}{GIBB Bern / SBB}{Bern}{}{Abschluss als Informatiker EFZ}
-
-\section{Skillset}
-\cvitemwithcomment{Javascript}{ausgezeichnet}{ES5/ES6, node.js, AngularJS, Vue.JS}
-\cvitemwithcomment{C\#/ASP.NET}{sehr gut}{.NET Core, EntityFramework}
-\cvitemwithcomment{Python}{sehr gut}{django, rest-framework}
-\cvitemwithcomment{GoLang}{gut}{cobra, viper}
-\cvitemwithcomment{Build/Run}{sehr gut}{Webpack, Fastlane, Gradle, Docker}
-\cvitemwithcomment{CI/CD}{sehr gut}{GitLab CI, Github Actions, Jenkins, Chef/Puppet}
-\cvitemwithcomment{HTML5/CSS3}{(sehr) gut}{SASS, Stylus}
-
+\section{Soft Skills}
+\cvitemwithcomment{}{Kommunikation}{Präsentationen, Schulungen}
+\cvitemwithcomment{}{Zeitmanagement}{Timeboxing, Spikes, 80/20 Regel}
+\cvitemwithcomment{}{Teamwork}{Bereichsübergreifend, virtuelle Teams, One Voice}
+\cvitemwithcomment{}{Analytisch}{Root-cause, Out-of-the-box Denkweise, Pragmatismus}
 
 \section{Sprachen}
 \cvitem{Deutsch}{Muttersprache}
@@ -72,19 +93,34 @@ Abgesehen von Web-Entwicklung kümmerte ich mich u.A. um folgende Themen:\newlin
 \cvitem{Französisch}{Schulkenntnisse}
 
 \section{Freizeit}
-\cvitem{Joggen / Schwimmen / Radfahren}{...oder auch "den hohen Steuersatz in Bern mit einem Aareschwumm erträglicher machen".}
-\cvitem{Filme / Bücher}{Über gute (und auch schlechte) Filme oder Bücher könnte ich mich stundenlang unterhalten.}
-\cvitem{Open-Source}{Sofern die Zeit es zulässt, involviere ich mich gerne in spannenden Open-Source Projekten.}
-
+\cvitem{Sport}{Ob Joggen, Schwimmen oder Radfahren: der sportliche Ausgleich zum Berufsalltag muss sein.}
+\cvitem{Filme \& Bücher}{Über gute (und auch schlechte) Filme oder Bücher kann ich mich stundenlang unterhalten.}
+\cvitem{Ethical Hacking}{Regnerische Tage verleiten mich des Öfteren dazu, das eine oder andere Bug-Bounty Programm nach neuen Applikationen zu durchstöbern.}
+\cvitem{Open-Source}{Ist noch Zeit da, engagiere ich mich gerne in spannenden Open-Source Projekten.}
 
 \section{Referenzen}
 \begin{cvcolumns}
   \cvcolumn{smartfactory Gmbh}{\begin{itemize}\item Roger Lüchinger, Geschäftsführer{\newline}+41 32 365 30 00\end{itemize}}
-  
-  \cvcolumn{Post CH AG}{\begin{itemize}\item Toni Stucki, Teamleiter{\newline}+41 58 341 27 27\end{itemize}}
+  \cvcolumn{Post CH AG}{\begin{itemize}\item Toni Stucki, Teamleiter I213{\newline}+41 58 341 27 27\end{itemize}}
 \end{cvcolumns}
 
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+% \nocite{*}
+% \bibliographystyle{plain}
+% \bibliography{publications}                        % 'publications' is the name of a BibTeX file
 
-\clearpage
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
 
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
 \end{document}
+
+%% end of file `template.tex'.
